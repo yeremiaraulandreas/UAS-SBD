@@ -60,7 +60,7 @@ while($user_data = mysqli_fetch_array($result))
 			</tr>
 			<tr> 
 				<td>Tanggal Transaksi</td>
-				<td><input type="text" name="tgl_trs" value=<?php echo $tgl_trs;?>></td>
+				<td><input type="date" name="tgl_trs" value=<?php echo $tgl_trs;?>></td>
 			</tr>
 			<tr>   
             <td>Total</td>

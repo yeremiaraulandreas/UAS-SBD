@@ -48,12 +48,13 @@ while($user_data = mysqli_fetch_array($result))
 	
 	<form name="update_user" method="post" action="edit_apart.php">
 		<table border="0">
+			
 			<tr> 
-				<td>ID apartement</td>
-				<td><input type="text" name="id_apart" value=<?php echo $id_apart;?>></td>
+				<td>ID Apart</td>
+				<td><input type="text" name="id_apart" readonly value=<?php echo $id_apart;?>></td>
 			</tr>
 			<tr> 
-				<td>Unit apartement</td>
+				<td>Unit Apart</td>
 				<td><input type="text" name="unit_apart" value=<?php echo $unit_apart;?>></td>
 			</tr>
 			<tr> 

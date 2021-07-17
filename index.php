@@ -63,7 +63,7 @@ session_start();
         <table border="1" cellpadding="5" cellspacing="0">
             <thead>
                 <tr>
-                    <th>ID Penyewa</th>
+                    <th>Nama Penyewa</th>
                     <th>ID apart</th>
                     <th>Tanggal check in</th>
                     <th>Tanggal Check out</th>
@@ -78,7 +78,7 @@ session_start();
                 ?>
                 <tbody>
                     <tr>
-                        <td><?php echo $row['id_penyewa']?></td>
+                        <td><?php echo $row['nm_penyewa']?></td>
                         <td><?php echo $row['id_apart']?></td>
                         <td><?php echo date('d/m/y', strtotime($row['tgl_chekin']))?></td>
                         <td><?php echo date('d/m/y', strtotime($row['tgl_checkout']))?></td>
@@ -92,7 +92,7 @@ session_start();
         </table>
     
         <h2>Tabel Transaksi</a></h2>
-        <a href="add_trs.php">TAMBAH DATA BARU</a><br/><br/>
+        <a href="add_trs.php">TAMBAH DATA BARU</a>&nbsp; ||&nbsp; <a href="cetak.php">CETAK</a> <br/><br/>
         <table border="1" cellpadding="5" cellspacing="0">
             <thead>
                 <tr>

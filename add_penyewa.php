@@ -15,8 +15,8 @@
 	<form action="add_penyewa.php" method="post" name="form1">
 		<table width="25%" border="0">
 			<tr> 
-				<td>ID penyewa</td>
-				<td><input type="text" name="id_penyewa"></td>
+				<td>Nama Penyewa</td>
+				<td><input type="text" name="nm_penyewa"></td>
 			</tr>
 			<tr> 
 				<td>ID apart</td>
@@ -24,11 +24,11 @@
 			</tr>
 			<tr>
 				<td>Tanggal Check in</td>
-				<td><input type="text" name="tgl_chekin"></td>
+				<td><input type="date" name="tgl_chekin"></td>
 			</tr>
             <tr>
 				<td>Tanggal Check out</td>
-				<td><input type="text" name="tgl_checkout"></td>
+				<td><input type="date" name="tgl_checkout"></td>
 			</tr>
 			<tr> 
 				<td></td>
@@ -41,15 +41,16 @@
  
  
 	if(isset($_POST['Submit'])) {
-		$id_penyewa = $_POST['id_penyewa'];
+		
+		$nm_penywa = $_POST['nm_penyewa'];
 		$id_apart = $_POST['id_apart'];
 		$tgl_chekin = $_POST['tgl_chekin'];
 		$tgl_checkout= $_POST['tgl_checkout'];
 
 		include("config.php");
 		
-		$result = mysqli_query($conn, "INSERT INTO penyewa(id_penyewa,id_apart,tgl_chekin,tgl_checkout) 
-		VALUES('$id_penyewa','$id_apart','$tgl_chekin','$tgl_checkout')");
+		$result = mysqli_query($conn, "INSERT INTO penyewa(nm_penyewa,id_apart,tgl_chekin,tgl_checkout) 
+		VALUES('$nm_penywa','$id_apart','$tgl_chekin','$tgl_checkout')");
 		
 		echo "User added successfully. <a href='index.php'>View Users</a>";
 	}

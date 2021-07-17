@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sistem Rental</title>
+    <title>Sistem Penyewaan</title>
     <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
     <div id="header">
-        <center><h1>Menambahkan Data</h1></center>
         <br><br>
+        <center><h1>MAHOGANI THE OASIS</h1></center>
+        
     </div>

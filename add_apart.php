@@ -37,14 +37,14 @@
  
  
 	if(isset($_POST['Submit'])) {
-		$id_apart = $_POST['id_apart'];
+	
 		$unit_apart = $_POST['unit_apart'];
 		$harga = $_POST['harga'];
 		
 		include("config.php");
 		
-		$result = mysqli_query($conn, "INSERT INTO apartemen(id_apart,unit_apart,harga) 
-		VALUES('$id_apart','$unit_apart','$harga')");
+		$result = mysqli_query($conn, "INSERT INTO apartemen(unit_apart,harga) 
+		VALUES('$unit_apart','$harga')");
 		
 		echo "User added successfully. <a href='index.php'>View Users</a>";
 	}

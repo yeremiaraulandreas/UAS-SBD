@@ -7,13 +7,14 @@ if(isset($_POST['update']))
     
 	
 	$id_penyewa=$_POST['id_penyewa'];
+	$nm_penyewa=$_POST['nm_penyewa'];
 	$id_apart=$_POST['id_apart'];
 	$tgl_in=$_POST['tgl_in'];
     $tgl_out=$_POST['tgl_out'];
 		
 	// update user dataa
 	$result = mysqli_query($conn, 
-	"UPDATE penyewa SET id_penyewa='$id_penyewa',id_apart='$id_apart',tgl_chekin='$tgl_in',tgl_checkout='$tgl_out' 
+	"UPDATE penyewa SET id_penyewa='$id_penyewa',nm_penyewa='$nm_penyewa',id_apart='$id_apart',tgl_chekin='$tgl_in',tgl_checkout='$tgl_out' 
 	WHERE id_penyewa=$id_penyewa");
 
     header("Location: index.php");
@@ -25,7 +26,7 @@ if(isset($_POST['update']))
 <head>
     <meta charset="UTF-8">
     <link href="styleubah.css" rel="stylesheet" type="text/css" />
-    <title>Ubah Data Mobil</title>
+    <title>Ubah Data Penyewa</title>
 </head>
 
 <?php
